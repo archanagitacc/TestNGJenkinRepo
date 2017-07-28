@@ -27,9 +27,9 @@ public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
          System.out.println("driver Success");
          if(testResult.isSuccess()){
         	driver.quit();
+        	  driver = null;
         	}
-        	
-            
+
         }
     }
 }
