@@ -4,7 +4,7 @@
 	   <listener class-name="com.TestNGSelenium.helpers.WebDriverListener"></listener>
 	</listeners>
  <test name="TestNGPracticeFormTest" >
-  <parameter name="browserName" value="headless"></parameter>
+  <parameter name="browserName" value="firefox"></parameter>
   <packages>	
   <package name="com.TestNGSelenium.Tests.*" />
   </packages>
