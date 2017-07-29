@@ -44,7 +44,7 @@ import org.codehaus.jackson.type.TypeReference;
 
 public class GenericHelper extends WebDriverManager{
 
-	public static WebDriver driver = WebDriverManager.getDriver(); 
+	//public static WebDriver driver = WebDriverManager.getDriver(); 
 	public static int SCREENSHOT_NUMBER = 1;
 	static YamlReader reader;
 	static Object object;
@@ -166,7 +166,7 @@ public class GenericHelper extends WebDriverManager{
 		
 		System.out.println(currentPageUrl);
 		
-		driver.get(currentPageUrl);
+		getDriver().get(currentPageUrl);
 
 	}
 
