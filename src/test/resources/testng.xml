@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Suite One" >
+<suite name="Suite One" parallel="methods" thread-count="4" >
 <listeners>
 	   <listener class-name="com.TestNGSelenium.helpers.WebDriverListener"></listener>
 	</listeners>
