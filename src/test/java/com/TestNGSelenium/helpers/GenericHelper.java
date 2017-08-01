@@ -21,7 +21,6 @@ import net.sf.json.xml.XMLSerializer;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import com.TestNGSelenium.Pojos.User;
 import com.TestNGSelenium.helpers.WebDriverManager;
 import com.esotericsoftware.yamlbeans.YamlReader;
@@ -32,7 +31,6 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
-
 import java.io.InputStream;
 import java.util.List;
 
@@ -50,8 +48,6 @@ public class GenericHelper extends WebDriverManager{
 	static Object object;
 	static Map<Object,Object> map;
 	public static ArrayList<String> ar ;
-	
-
 	public static String readProperty(String strg){
 
 		File file = new File("src\\test\\resources\\dev.properties");

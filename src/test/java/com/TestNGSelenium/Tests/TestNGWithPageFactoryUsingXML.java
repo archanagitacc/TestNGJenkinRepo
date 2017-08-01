@@ -4,9 +4,8 @@ import org.testng.annotations.Test;
 
 import com.TestNGSelenium.ReusableClasses.TestNGUsingXmlReusable;
 
-public class TestNGWithPageFactoryUsingXML {
-
-
+public class TestNGWithPageFactoryUsingXML extends BaseTest{
+		
 	@Test
 	public void getDataFromXML(){
 
@@ -16,4 +15,6 @@ public class TestNGWithPageFactoryUsingXML {
 		objXmlReusable.getDataFromXMLReusable();
 
 	}
+	
+
 }

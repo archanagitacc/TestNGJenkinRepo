@@ -1,30 +1,21 @@
 package com.TestNGSelenium.Tests;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.TestNGSelenium.PageFactory.HomePageFactory;
 import com.TestNGSelenium.PageFactory.LoginPageFactory;
 import com.TestNGSelenium.Pojos.User;
 import com.TestNGSelenium.helpers.GenericHelper;
-import com.relevantcodes.extentreports.DisplayOrder;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-import com.relevantcodes.extentreports.NetworkMode;
 
 
-public class Test99GuruLoginWithPageFactoryUsingDB {
+public class Test99GuruLoginWithPageFactoryUsingDB extends BaseTest{
 
 	HomePageFactory objHomePage;
 
 	LoginPageFactory objLogin;
 
-	ExtentReports extent;
 	
-	ExtentTest test;
 	
 	String img_path;
 	
@@ -32,17 +23,7 @@ public class Test99GuruLoginWithPageFactoryUsingDB {
 	
 	String testcaseName; 
 	
-	@BeforeTest 
-	public void startReport(){
-		
-		extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/MyReport.html", false,DisplayOrder.NEWEST_FIRST, NetworkMode.OFFLINE);
 	
-		extent.addSystemInfo("HostName", "Archana")
-		.addSystemInfo("Environment", "QA")
-		.addSystemInfo("UserName", "Archana Shinde");
-		
-		test = extent.startTest("demoReportPass","filling practice form").assignCategory("practiceForm");
-	}
 
 	/**
 
@@ -85,31 +66,12 @@ public class Test99GuruLoginWithPageFactoryUsingDB {
 		//Verify home page
 
 		Assert.assertTrue(objHomePage.getHomePageDashboardUserName().toLowerCase().contains("manger id : mngr86459"));
-
-		GenerateExtentReport();
+	
 		
 		GenericHelper.ScreenshotToPDf(testcaseName);
 		
 	}
 	
-	public void GenerateExtentReport(){
-
-		testcaseName = Test99GuruLoginWithPageFactoryUsingDB.class.getSimpleName();
-		
-		String img_path = GenericHelper.TakeScreenshot(testcaseName);
-
-		// report with snapshot
-
-		String img = test.addScreenCapture(img_path);
-
-		test.log(LogStatus.INFO, "Image", "Image example: " + img);
-	}
-
-	@AfterTest
-	public void endReport(){
-		extent.endTest(test);
-		extent.flush();
-		extent.close();
-	}
+	
 
 }

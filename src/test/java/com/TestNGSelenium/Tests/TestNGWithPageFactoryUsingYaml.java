@@ -9,8 +9,11 @@ import com.TestNGSelenium.helpers.GenericHelper;
 import com.TestNGSelenium.helpers.Log;
 
 
-public class TestNGWithPageFactoryUsingYaml {
+public class TestNGWithPageFactoryUsingYaml extends BaseTest{
 
+	
+	
+	
 	@BeforeClass
 	public void setUp(){
 		
@@ -18,6 +21,8 @@ public class TestNGWithPageFactoryUsingYaml {
 		 
 		Log.startTestCase("TestNGUsingYaml is started");
 	}
+	
+	
 	@Test
 	public void fillPracticeForm() {
 
@@ -39,4 +44,6 @@ public class TestNGWithPageFactoryUsingYaml {
 		}
 
 	}
+	
+	
 }
